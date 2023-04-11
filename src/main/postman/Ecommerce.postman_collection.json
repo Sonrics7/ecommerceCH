@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "b54e878f-327f-4479-ae27-999ea7c4583f",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1GetClient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/client/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1PostClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"name\": \"123\",\r\n    \"lastname\": \"123\",\r\n    \"docnumber\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/client/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1PutClient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"aaa\",\r\n        \"lastname\": \"aaa\",\r\n        \"docnumber\": \"0010101\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/client/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"client",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2GetInvoice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/invoice/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2PostInvoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 8,\r\n        \"createdAt\": \"2023-03-06\",\r\n        \"total\": 12.0,\r\n        \"client\": {\r\n            \"id\": 3,\r\n            \"name\": \"Cristiano\",\r\n            \"lastname\": \"Ronaldo\",\r\n            \"docnumber\": \"11111111113\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/invoice/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2PutInvoice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"createdAt\": \"2023-04-07\",\r\n    \"total\": 40.0,\r\n    \"client\": {\r\n        \"id\": 3,\r\n        \"name\": \"Cristiano\",\r\n        \"lastname\": \"Ronaldo\",\r\n        \"docnumber\": \"11111111113\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/invoice/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"invoice",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3GetInvoiceDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/invoiceDetail/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"invoiceDetail",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3PostInvoiceDetail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"amount\": 5,\r\n    \"price\": 57.5,\r\n    \"invoice\": {\r\n        \"id\": 2,\r\n        \"createdAt\": \"2023-03-14\",\r\n        \"total\": 22.0,\r\n        \"client\": {\r\n            \"id\": 2,\r\n            \"name\": \"Livier\",\r\n            \"lastname\": \"Davalos\",\r\n            \"docnumber\": \"11111111112\"\r\n        }\r\n    },\r\n    \"product\": {\r\n        \"id\": 2,\r\n        \"description\": \"Trapeador\",\r\n        \"code\": \"002\",\r\n        \"stock\": 11,\r\n        \"price\": 11.5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/invoiceDetail/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"invoiceDetail",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3PutInvoiceDetail",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"amount\": 2,\r\n    \"price\": 57.5,\r\n    \"invoice\": {\r\n        \"id\": 2,\r\n        \"createdAt\": \"2023-03-14\",\r\n        \"total\": 22.0,\r\n        \"client\": {\r\n            \"id\": 2,\r\n            \"name\": \"Livier\",\r\n            \"lastname\": \"Davalos\",\r\n            \"docnumber\": \"11111111112\"\r\n        }\r\n    },\r\n    \"product\": {\r\n        \"id\": 2,\r\n        \"description\": \"Trapeador\",\r\n        \"code\": \"002\",\r\n        \"stock\": 11,\r\n        \"price\": 11.5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/invoiceDetail/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"invoiceDetail",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4GetProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4PostProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"description\": \"1111\",\r\n        \"code\": \"1111\",\r\n        \"stock\": 1,\r\n        \"price\": 1.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4PutProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"description\": \"123\",\r\n        \"code\": \"123\",\r\n        \"stock\": 1230,\r\n        \"price\": 1230.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ecommerce/product/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ecommerce",
+						"product",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
